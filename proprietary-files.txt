@@ -1,18 +1,6 @@
 # Proprietary files for cedric
 
 # Apps
--app/embms/embms.apk
--app/imssettings/imssettings.apk
--app/QtiTelephonyService/QtiTelephonyService.apk
--app/TimeService/TimeService.apk
--priv-app/ims/ims.apk|eef47c0b6f250e7f96e7155d84274b1c83940d8f
--priv-app/atfwd/atfwd.apk
--priv-app/CNEService/CNEService.apk
--priv-app/com.qualcomm.location/com.qualcomm.location.apk
--priv-app/HotwordEnrollmentOKGoogleCS47L35/HotwordEnrollmentOKGoogleCS47L35.apk
--priv-app/HotwordEnrollmentTGoogleCS47L35/HotwordEnrollmentTGoogleCS47L35.apk
--priv-app/HotwordEnrollmentXGoogleCS47L35/HotwordEnrollmentXGoogleCS47L35.apk
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 
 # Blobs
 bin/charge_only_mode
@@ -184,11 +172,6 @@ vendor/etc/init/motorola.hardware.camera.provider@2.4-service_delayed.rc
 vendor/etc/init/vendor.qti.hardware.iop@1.0-service.rc
 vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
--framework/com.qualcomm.qti.imscmservice@1.0-java.jar
--framework/QtiTelephonyServicelibrary.jar
--framework/qcrilhook.jar
--framework/qti-telephony-common.jar
--vendor/framework/vendor.qti.hardware.alarm-V1.0-java.jar
 vendor/lib/hw/fingerprint.vendor.msm8937.so
 lib/lib_fpc_tac_shared.so
 lib/libadropbox.so
