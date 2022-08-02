@@ -261,6 +261,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     android.hardware.media.omx \
+    android.hardware.media.omx@1.0-service \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
@@ -441,3 +442,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-motorola
 PRODUCT_PACKAGES += \
     libstdc++.vendor \
     vndk_package
+
+PRODUCT_COPY_FILES += \
+    device/motorola/cedric/seccomp_policy/crash_dump.arm.policy:system/etc/seccomp_policy/crash_dump.arm.policy
+    
