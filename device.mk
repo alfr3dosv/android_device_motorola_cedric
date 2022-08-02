@@ -378,8 +378,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-cedric.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
 # Touch HAL
-# PRODUCT_PACKAGES += \
-#     vendor.lineage.touch@1.0-service.cedric
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.cedric
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
@@ -397,30 +397,25 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndk-sp
 
-# Wifi
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
-    libqsap_sdk \
-    libwpa_client \
-    wcnss_service \
-    wificond \
-    wifilogd
-
 #Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service \
     thermal.msm8937
 
-#Wifi
+# Wifi
 PRODUCT_PACKAGES += \
-    libcurl \
+    android.hardware.wifi@1.0-service \
+    hostapd \
+    libqsap_sdk \
+    libwpa_client \
     libQWiFiSoftApCfg \
-    wificond \
-    wifilogd \
     tcpdump \
     wcnss_service \
-    libwpa_client
+    wificond \
+    wifilogd \
+    wpa_supplicant \
+    wpa_supplicant.conf
 
 # Wifi Configurations
 PRODUCT_COPY_FILES += \

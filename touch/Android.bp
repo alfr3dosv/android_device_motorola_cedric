@@ -23,6 +23,7 @@ cc_binary {
         "service.cpp"
     ],
     shared_libs: [
+        "libbinder",
         "libbase",
         "libhidlbase",
         "libhidltransport",
