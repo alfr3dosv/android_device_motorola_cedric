@@ -27,4 +27,12 @@ LOCAL_SHARED_LIBRARIES := liblog libcutils
 LOCAL_MODULE_TAGS := optional
 LOCAL_CFLAGS := -Wno-unused-parameter
 
+LOCAL_LDLIBS := -llog
+LOCAL_SHARED_LIBRARIES := \
+    libcutils \
+    libdl \
+    libbase \
+    libutils \
+    libhardware \
+
 include $(BUILD_SHARED_LIBRARY)
