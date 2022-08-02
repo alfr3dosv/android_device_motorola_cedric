@@ -18,11 +18,12 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/halium.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/device.mk)
+$(call inherit-product, device/motorola/cedric/device.mk)
 #$(call inherit-product, device/motorola/cedric/full_cedric.mk)
 
 # Inherit some common CM stuff.
 #$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+#$(call inherit-product, vendor/motorola/cedric/cedric-vendor.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
