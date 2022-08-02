@@ -253,10 +253,6 @@ PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm \
     vendor.lineage.livedisplay@2.0-service-sysfs
 
-# PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/configs/qdcm_calib_data_mipi_mot_vid_inx_1080p_497.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_mipi_mot_vid_inx_1080p_497.xml \
-#    $(LOCAL_PATH)/configs/qdcm_calib_data_mipi_mot_vid_tianma_1080p_497.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_mipi_mot_vid_tianma_1080p_497.xml
-
 # Media
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -340,19 +336,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     $(LOCAL_PATH)/seccomp_policy/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
-
-# IMS
-# PRODUCT_PACKAGES += \
-#     ims-ext-common
-
-# IMS
-# PRODUCT_PACKAGES += \
-#     ims-ext-common \
-#     qti-telephony-common \
-#     telephony-ext
-
-# PRODUCT_BOOT_JARS += \
-#     telephony-ext
 
 # Sensors
 PRODUCT_COPY_FILES += \
