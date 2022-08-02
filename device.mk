@@ -177,38 +177,38 @@ PRODUCT_PACKAGES += \
     libebtc
 
 # Fingerprint
-# PRODUCT_PACKAGES += \
-#     android.hardware.biometrics.fingerprint@2.1
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1
 
 # Fingerprint IDC
-# PRODUCT_COPY_FILES += \
-#     $(LOCAL_PATH)/idc/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/idc/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc
 
 # FM
-# PRODUCT_PACKAGES += \
-#     FMRadio \
-#     libfmjni \
-#     init.qti.fm.sh
+PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmjni \
+    init.qti.fm.sh
 
 # GPS Configurations
-# PRODUCT_COPY_FILES += \
-#     $(LOCAL_PATH)/gps/etc/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
-#     $(LOCAL_PATH)/gps/etc/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
-#     $(LOCAL_PATH)/gps/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
-#     $(LOCAL_PATH)/gps/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
-#     $(LOCAL_PATH)/gps/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
-#     $(LOCAL_PATH)/gps/etc/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf \
-#     $(LOCAL_PATH)/gps/etc/cacert_location.pem:$(TARGET_COPY_OUT_VENDOR)/etc/cacert_location.pem \
-#     $(LOCAL_PATH)/configs/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/gps/etc/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
+    $(LOCAL_PATH)/gps/etc/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
+    $(LOCAL_PATH)/gps/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
+    $(LOCAL_PATH)/gps/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
+    $(LOCAL_PATH)/gps/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
+    $(LOCAL_PATH)/gps/etc/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf \
+    $(LOCAL_PATH)/gps/etc/cacert_location.pem:$(TARGET_COPY_OUT_VENDOR)/etc/cacert_location.pem \
+    $(LOCAL_PATH)/configs/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
 
 # GPS
-# PRODUCT_PACKAGES += \
-#     libgnss \
-#     libgnsspps \
-#     android.hardware.gnss@1.1-impl-qti \
-#     android.hardware.gnss@1.1-service-qti \
-#     libqsap_sdk \
-#     libqsap_shim
+PRODUCT_PACKAGES += \
+    libgnss \
+    libgnsspps \
+    android.hardware.gnss@1.1-impl-qti \
+    android.hardware.gnss@1.1-service-qti \
+    libqsap_sdk \
+    libqsap_shim
 
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
@@ -327,14 +327,14 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml
 
 # RIL
-# PRODUCT_PACKAGES += \
-#     librmnetctl \
-#     libprotobuf-cpp-full \
-#     libxml2
+PRODUCT_PACKAGES += \
+    librmnetctl \
+    libprotobuf-cpp-full \
+    libxml2
 
-#RIL
-# PRODUCT_PACKAGES += \
-#     android.hardware.radio@1.0
+# RIL
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.0
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
@@ -414,7 +414,7 @@ PRODUCT_PACKAGES += \
     tcpdump \
     wcnss_service \
     wificond \
-    wifilogd \
+    wifilogd  \
     wpa_supplicant \
     wpa_supplicant.conf
 
