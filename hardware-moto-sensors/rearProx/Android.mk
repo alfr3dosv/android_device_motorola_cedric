@@ -41,7 +41,8 @@ LOCAL_SHARED_LIBRARIES += \
     libutils \
     libcutils \
     liblog \
-    libdl
+    libdl \
+	libhardware
 
 
 include $(BUILD_SHARED_LIBRARY)

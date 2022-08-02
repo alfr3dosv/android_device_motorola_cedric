@@ -15,6 +15,9 @@
 
 LOCAL_TOP_DIR := $(call my-dir)
 LOCAL_PATH := $(LOCAL_TOP_DIR)
+LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+    # Need the UAPI output directory to be populated with motosh.h/stml0xx.h
+#LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 LOCAL_CFLAGS += -Wno-gnu-designator -Wno-writable-strings
 
 # If other Android.mk files are included explicitly, this must be called before
@@ -181,7 +184,7 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
         LOCAL_MODULE_RELATIVE_PATH := hw
         LOCAL_MODULE_TAGS := optional
         LOCAL_PROPRIETARY_MODULE := true
-        LOCAL_SHARED_LIBRARIES += liblog libcutils libz libdl libutils
+        LOCAL_SHARED_LIBRARIES += liblog libc libcutils libz libdl libutils libhardware 
         LOCAL_CLANG := true
         LOCAL_MODULE := sensors.$(TARGET_BOARD_PLATFORM)
         LOCAL_CFLAGS += -Wno-gnu-designator -Wno-writable-strings
@@ -204,7 +207,7 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
     # Need the UAPI output directory to be populated with motosh.h/stml0xx.h
     LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
-    LOCAL_SHARED_LIBRARIES := libcutils libc libutils liblog
+    LOCAL_SHARED_LIBRARIES := libcutils libc libutils liblog libhardware libcutils
     LOCAL_PROPRIETARY_MODULE := true
     LOCAL_MODULE := sensorhub.$(TARGET_BOARD_PLATFORM)
     LOCAL_MODULE_TAGS := optional
@@ -229,7 +232,7 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
     LOCAL_CFLAGS += -Wno-gnu-designator -Wno-writable-strings
     # Added by top level make files: -std=gnu++11
     LOCAL_CXXFLAGS += -Weffc++
-    LOCAL_SHARED_LIBRARIES := libcutils libc libsensorhub liblog
+    LOCAL_SHARED_LIBRARIES := libcutils libc libsensorhub liblog libhardware
 
     LOCAL_SRC_FILES := \
         motosh_bin/motosh.cpp \
@@ -286,7 +289,7 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
         LOCAL_STATIC_LIBRARIES := AK09912
 
         LOCAL_FORCE_STATIC_EXECUTABLE := false
-        LOCAL_SHARED_LIBRARIES := libc libm libutils libcutils liblog
+        LOCAL_SHARED_LIBRARIES := libc libm libutils libcutils liblog libhardware
 
         include $(BUILD_EXECUTABLE)
 
@@ -306,7 +309,7 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
         LOCAL_MODULE := capsense_reset
         LOCAL_SRC_FILES :=  \
             $(CAP_PATH)/capsense.cpp
-        LOCAL_SHARED_LIBRARIES := libc liblog libcutils libhardware_legacy
+        LOCAL_SHARED_LIBRARIES := libc liblog libcutils libhardware
         LOCAL_MODULE_TAGS := optional
         include $(BUILD_EXECUTABLE)
     endif
@@ -344,4 +347,6 @@ else # For non sensorhub version of sensors
     ###########################################
 
 endif # BOARD_USES_MOT_SENSOR_HUB
+
+
 
