@@ -148,6 +148,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0 \
+    # android.hidl.manager-V1.0-java
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
@@ -315,6 +316,7 @@ PRODUCT_PACKAGES += \
     init.cedric.rc \
     init.mmi.usb.rc \
     init.qcom.rc \
+    init.qcom.ril.sh \
     ueventd.qcom.rc
 
 # Powerhint configuration file
@@ -381,25 +383,33 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndk-sp
 
-#Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@1.0-service \
-    thermal.msm8937
-
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
     libqsap_sdk \
     libwpa_client \
-    libQWiFiSoftApCfg \
-    tcpdump \
     wcnss_service \
     wificond \
-    wifilogd  \
+    wifilogd \
     wpa_supplicant \
     wpa_supplicant.conf
+
+#Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@1.0-service \
+    thermal.msm8937
+
+#Wifi
+PRODUCT_PACKAGES += \
+    libcurl \
+    libQWiFiSoftApCfg \
+    wificond \
+    wifilogd \
+    tcpdump \
+    wcnss_service \
+    libwpa_client
 
 # Wifi Configurations
 PRODUCT_COPY_FILES += \
